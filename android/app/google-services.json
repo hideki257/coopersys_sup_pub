@@ -1,0 +1,118 @@
+{
+  "project_info": {
+    "project_number": "663803128734",
+    "project_id": "coopersys-adm-vxx",
+    "storage_bucket": "coopersys-adm-vxx.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:663803128734:android:d3e2ee115a93dbc6dd448f",
+        "android_client_info": {
+          "package_name": "com.coopersys.adm"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "663803128734-hh23gblkb4v9h8rfb3554r46inoc22s3.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDwsIIfYHPWxijzizv0SlSWGgbEg5yyxg4"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "663803128734-hh23gblkb4v9h8rfb3554r46inoc22s3.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "663803128734-etnd100dr7vf397s3ps6lcog910uenk7.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.example.coopersysAdm"
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:663803128734:android:9b16da6aab41f45fdd448f",
+        "android_client_info": {
+          "package_name": "com.coopersys.sup"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "663803128734-hh23gblkb4v9h8rfb3554r46inoc22s3.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDwsIIfYHPWxijzizv0SlSWGgbEg5yyxg4"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "663803128734-hh23gblkb4v9h8rfb3554r46inoc22s3.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "663803128734-etnd100dr7vf397s3ps6lcog910uenk7.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.example.coopersysAdm"
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:663803128734:android:64bbea710065b238dd448f",
+        "android_client_info": {
+          "package_name": "com.example.coopersys_sup"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "663803128734-hh23gblkb4v9h8rfb3554r46inoc22s3.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDwsIIfYHPWxijzizv0SlSWGgbEg5yyxg4"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "663803128734-hh23gblkb4v9h8rfb3554r46inoc22s3.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "663803128734-etnd100dr7vf397s3ps6lcog910uenk7.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.example.coopersysAdm"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

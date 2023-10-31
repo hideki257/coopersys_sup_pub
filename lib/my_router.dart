@@ -4,6 +4,7 @@ import 'models/cooper.dart';
 import 'models/crud.dart';
 import 'pages/cooper_crud_page.dart';
 import 'pages/cooper_list_page.dart';
+import 'pages/cooper_user_crud.page.dart';
 import 'pages/cooper_user_list_page.dart';
 import 'pages/home_page.dart';
 import 'pages/login_page.dart';
@@ -25,6 +26,7 @@ class MyRouter {
   static const cooperCrud = '/cooperativa/crud';
   static const cooperList = '/cooperativa/list';
   static const cooperUserList = '/cooperativa/crud/usuario/list';
+  static const cooperUserCrud = '/cooperativa/crud/usuario/crud';
 
   static Route<dynamic> generateRoute(RouteSettings settings) {
     switch (settings.name) {
@@ -58,6 +60,16 @@ class MyRouter {
           Cooper cooper = settings.arguments as Cooper;
           return MaterialPageRoute(
               builder: (_) => CooperUserListPage(cooper: cooper));
+        } else {
+          throw MyRouterException('Chave inválida para Cooperativa!');
+        }
+      case cooperUserCrud:
+        if (settings.arguments is CooperUserCrudKey) {
+          CooperUserCrudKey cooperUserCrudKey =
+              settings.arguments as CooperUserCrudKey;
+          return MaterialPageRoute(
+              builder: (_) =>
+                  CooperUserCrudPage(cooperUserCrudKey: cooperUserCrudKey));
         } else {
           throw MyRouterException('Chave inválida para Cooperativa!');
         }

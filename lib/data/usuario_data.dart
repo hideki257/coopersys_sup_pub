@@ -94,4 +94,17 @@ class UsuarioData {
     }).catchError((_) {});
     return retorno;
   }
+
+  Future<List<Usuario>> listarUsuarios() async {
+    List<Usuario> result = [];
+    FirebaseFirestore db = await DBFirestore.get();
+    await PathRef.colRefUsuarios(db).get().then((value) async {
+      for (var doc in value.docs) {
+        result.add(Usuario.fromMap(doc.data()));
+      }
+    }).catchError((error) async {
+      result = [];
+    });
+    return result;
+  }
 }

@@ -1,6 +1,7 @@
 class Usuario {
   final String userId;
   String? email;
+  String? phoneNumber;
   String? nome;
   DateTime? dataNascimento;
   bool inativo = false;
@@ -12,6 +13,7 @@ class Usuario {
   Usuario({
     required this.userId,
     this.email,
+    this.phoneNumber,
     this.nome,
     this.dataNascimento,
     this.inativo = false,
@@ -21,6 +23,7 @@ class Usuario {
     return {
       'userId': userId,
       'email': email,
+      'phoneNumber': phoneNumber,
       'nome': nome,
       'dataNascimento': dataNascimento?.millisecondsSinceEpoch,
       'inativo': inativo,
@@ -47,6 +50,7 @@ class Usuario {
   Usuario.fromMap(Map<String, dynamic> map)
       : userId = map['userId'],
         email = map['email'],
+        phoneNumber = map['phoneNumber'],
         nome = map['nome'],
         dataNascimento = map['dataNascimento'] != null
             ? DateTime.fromMillisecondsSinceEpoch(map['dataNascimento'])

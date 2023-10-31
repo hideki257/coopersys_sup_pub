@@ -34,8 +34,9 @@ class CooperUserListPage extends ConsumerWidget {
             onPressed: () {
               Navigator.pushNamed(
                 context,
-                MyRouter.cooperCrud,
-                arguments: CooperCrudKey(crud: Crud.create),
+                MyRouter.cooperUserCrud,
+                arguments: CooperUserCrudKey(
+                    crud: Crud.create, cooperId: cooper.cooperId, userId: null),
               );
             },
           ),
@@ -52,18 +53,44 @@ class CooperUserListPage extends ConsumerWidget {
             ),
             Padding(
               padding: const EdgeInsets.all(8.0),
-              child: data.isEmpty
-                  ? const Center(
-                      child: Text('Nenhum usuário vinculado!'),
-                    )
-                  : ListView.builder(
-                      itemCount: data.length,
-                      itemBuilder: (context, index) {
-                        return ListTile(
-                          title: Text(data[index].userNome),
-                        );
-                      },
-                    ),
+              child: Flexible(
+                child: data.isEmpty
+                    ? const Center(
+                        child: Text('Nenhum usuário vinculado!'),
+                      )
+                    : Padding(
+                        padding: const EdgeInsets.all(8.0),
+                        child: Container(
+                          decoration: BoxDecoration(
+                            border: Border.all(),
+                            borderRadius:
+                                const BorderRadius.all(Radius.circular(5)),
+                          ),
+                          child: ListView.separated(
+                            scrollDirection: Axis.vertical,
+                            shrinkWrap: true,
+                            padding: const EdgeInsets.all(8.0),
+                            itemCount: data.length,
+                            separatorBuilder: (_, __) => const Divider(),
+                            itemBuilder: (context, index) => ListTile(
+                              title: Text(data[index].userNome),
+                              trailing: IconButton(
+                                icon: Icon(Icons.delete, color: Colors.red),
+                                onPressed: () => Navigator.pushNamed(
+                                  context,
+                                  MyRouter.cooperUserCrud,
+                                  arguments: CooperUserCrudKey(
+                                    crud: Crud.delete,
+                                    cooperId: data[index].cooperId,
+                                    userId: data[index].userId,
+                                  ),
+                                ),
+                              ),
+                            ),
+                          ),
+                        ),
+                      ),
+              ),
             ),
           ],
         ),
